@@ -1,0 +1,287 @@
+.voyage-replay-container {
+  min-height: calc(100vh - 70px);
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.voyage-replay-header {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.voyage-replay-header h1 {
+  color: #2a5298;
+  margin: 0 0 1rem 0;
+}
+
+.voyage-info {
+  display: flex;
+  gap: 2rem;
+  color: #666;
+}
+
+.replay-controls {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.control-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.play-pause-btn,
+.reset-btn {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.play-pause-btn:hover,
+.reset-btn:hover {
+  transform: translateY(-2px);
+}
+
+.speed-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.speed-controls label {
+  font-weight: 600;
+  color: #555;
+  margin-right: 0.5rem;
+}
+
+.speed-controls button {
+  background: white;
+  border: 2px solid #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.speed-controls button:hover {
+  border-color: #2a5298;
+  color: #2a5298;
+}
+
+.speed-controls button.active {
+  background: #2a5298;
+  color: white;
+  border-color: #2a5298;
+}
+
+.time-display {
+  font-weight: 600;
+  color: #2a5298;
+  font-size: 1.1rem;
+}
+
+.replay-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.map-view-replay {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+}
+
+.map-placeholder-replay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 500px;
+}
+
+.map-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.map-message h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.current-position {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.voyage-path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.waypoint {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  transition: all 0.3s;
+}
+
+.waypoint.passed {
+  background: #4caf50;
+  color: white;
+}
+
+.waypoint.upcoming {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.voyage-details-panel {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.voyage-details-panel h3 {
+  color: #2a5298;
+  margin: 0 0 1.5rem 0;
+}
+
+.progress-bar-container {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background: #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  height: 100%;
+  border-radius: 15px;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  text-align: center;
+  font-weight: 600;
+  color: #555;
+}
+
+.current-stats {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.current-stats h4 {
+  color: #2a5298;
+  margin: 0 0 1rem 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: #555;
+}
+
+.stat-item strong {
+  color: #333;
+}
+
+.voyage-timeline h4 {
+  color: #2a5298;
+  margin: 0 0 1rem 0;
+}
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.timeline-item {
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  color: #555;
+}
+
+.timeline-item strong {
+  color: #333;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  .replay-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .replay-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .control-group {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .speed-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
